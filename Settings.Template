@@ -1,0 +1,25 @@
+{
+    "Token": "<DISCORD BOT TOKEN GOES HERE>",
+    "HelpMessages": {
+        "help": "`SS!Info`: Get user info\n`SS!Register`: Get notified when a user's stats change\n`SS!UnRegister`: Stop getting notified when a user's stats change\n`SS!List`: Shows all registered users in the channel\n`SS!Help`: Used for the command list and description of individual commands\n`SS!Leaderboard (position)`: Get information on people near a specific leaderboard position\n`SS!Changelog`: Show the latest changelog\n`SS!Privacy`: Show the privacy policy\n\nDo `SS!Help (Command)` to see command help",
+        "info": "Usage:\n`SS!Info (ScoreSaber User)`\nGet someone's stats on ScoreSaber",
+        "register": "Usage:\n`SS!Register (ScoreSaber User) ping=Yes globalRankThreshold=1 countryRankThreshold=1 ppThreshold=0.01`\nGet notified when someone's stats change in ScoreSaber\n\nArguments:\n`globalRankThreshold` How much the global rank has to change before you get notified\n`countryRankThreshold` How much the country rank has to change before you get notified\n`ppThreshold` How much PP has to change before you get notified\n`ping` Yes or No, determines whether you should be pinged or not",
+        "unregister": "Usage:\n`SS!UnRegister (ScoreSaber User)`\nStop getting notified when someone's stats change in ScoreSaber",
+        "list": "Usage:\n`SS!List`\nList all users registered by you in this channel.",
+        "leaderboard": "Usage:\n`SS!Leaderboard (Leaderboard Position)`\nGet a list of people near the leaderboard position provided",
+        "changelog": "Usage:\n`SS!Changelog`\nGet the changelog for the current bot version"
+    },
+    "StatusMessages": [
+        "Informing people",
+        "PP Grinding",
+        "Click The Blocks",
+        "Beat Saber",
+        "Seat Baber"
+    ],
+    "ChangeLog": {
+        "Latest": "1.0",
+        "1.0": "Initial open source version"
+    },
+    "SupportServerURL": "https://discord.gg/",
+    "PFPURL": "<URL TO PROFILE PICTURE SHOWN AS EMBED AUTHOR>"
+}
