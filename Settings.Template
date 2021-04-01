@@ -10,16 +10,17 @@
         "changelog": "Usage:\n`SS!Changelog`\nGet the changelog for the current bot version"
     },
     "StatusMessages": [
-        "Informing people",
         "PP Grinding",
         "Click The Blocks",
         "Beat Saber",
-        "Seat Baber"
+        "Seat Baber",
+        "with a broken headset"
     ],
     "ChangeLog": {
         "Latest": "1.0",
         "1.0": "Initial open source version"
     },
     "SupportServerURL": "https://discord.gg/",
-    "PFPURL": "<URL TO PROFILE PICTURE SHOWN AS EMBED AUTHOR>"
+    "PFPURL": "<URL TO PROFILE PICTURE SHOWN AS EMBED AUTHOR>",
+    "SourceURL": "https://github.com/0xDEADCADE/ScoreSaber-Stats-Discord"
 }
