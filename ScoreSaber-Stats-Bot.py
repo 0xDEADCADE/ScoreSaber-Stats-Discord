@@ -222,18 +222,18 @@ async def SendStatUpdates():
             Player["playerInfo"] = NewPlayer
             # Overwrite player data
             RegisteredPlayers[n] = Player
-        with open("SSData.json", "w+") as f:
-            f.write(json.dumps(RegisteredPlayers, indent=4))
+    with open("SSData.json", "w+") as f:
+        f.write(json.dumps(RegisteredPlayers, indent=4))
 
-        # After updating all the players stats and saving them to a file, send messages
-        for message in Messages:
-            # Wait a couple seconds per update, discord doesn't like spamming
-            await asyncio.sleep(2)
-            try:
-                channel = message[0]
-                await channel.send(message[1], embed=message[2])
-            except:
-                pass
+    # After updating all the players stats and saving them to a file, send messages
+    for message in Messages:
+        # Wait a couple seconds per update, discord doesn't like spamming
+        await asyncio.sleep(2)
+        try:
+            channel = message[0]
+            await channel.send(message[1], embed=message[2])
+        except:
+            pass
     # Tell commands updating process is done
     IsUpdating = False
 
@@ -260,7 +260,7 @@ async def StatusUpdateRoutine():
     while True:
         try:
             await UpdateStatus(client)
-        except Exceptioni as ex:
+        except Exception as ex:
             print(ex)
         # Update status once every 10 minutes
         await asyncio.sleep(600)
