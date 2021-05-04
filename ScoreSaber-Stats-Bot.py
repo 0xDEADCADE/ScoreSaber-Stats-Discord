@@ -244,10 +244,10 @@ async def StatUpdateRoutine():
     await client.wait_until_ready()
     StatUpdateRunning = True
     while True:
-        # try:
-        await SendStatUpdates()
-        # except Exception as ex:
-            # print(ex)
+        try:
+            await SendStatUpdates()
+        except Exception as ex:
+            print(ex)
         IsUpdating = False
         # Update stats once every 30 minutes
         await asyncio.sleep(1800)
@@ -258,10 +258,10 @@ async def StatusUpdateRoutine():
     await client.wait_until_ready()
     StatusUpdateRunning = True
     while True:
-        # try:
-        await UpdateStatus(client)
-        # except Exceptioni as ex:
-            # print(ex)
+        try:
+            await UpdateStatus(client)
+        except Exceptioni as ex:
+            print(ex)
         # Update status once every 10 minutes
         await asyncio.sleep(600)
 
