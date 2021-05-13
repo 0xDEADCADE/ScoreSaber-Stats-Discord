@@ -97,8 +97,7 @@ def GetSSProfileAll(ssplayer):
             player = GetStatsID(ssid)
         except:
             raise KeyError
-    else:
-        return player
+    return player
 
 # Take a scoresaber id and check if the profile exists
 def CheckIfSSIDExists(ssid):
@@ -316,6 +315,7 @@ class MyClient(discord.Client):
             # Catch KeyError (thrown by GetPlayerProfileAll and passed by GetStats)
             try:
                 player = GetSSProfileAll(' '.join(splitcontent[1:]))
+                player = GetStatsID(player["playerId"])
             except KeyError:
                 await message.channel.send("That user doesn't exist!")
                 return
