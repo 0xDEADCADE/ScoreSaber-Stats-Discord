@@ -195,7 +195,7 @@ async def SendStatUpdates():
             if UpdateChannel == None:
                 # Discord.py likes to randomly return None instead of throwing an error
                 continue
-            
+
             # If the user has selected to be pinged on status update
             if Player["ping"]:
                 ping = f"<@{Player['discordUserId']}> "
@@ -300,7 +300,7 @@ class MyClient(discord.Client):
             elif len(splitcontent) == 2:
                 HelpString = splitcontent[1].split("!")[-1].lower()
                 if HelpString in HelpMessages.keys():
-                    await message.channel.send(content="", embed=GetEmbed("SS!{HelpString[0].upper()}{HelpString[1:]}", HelpMessages[HelpString]))
+                    await message.channel.send(content="", embed=GetEmbed(f"SS!{HelpString[0].upper()}{HelpString[1:]}", HelpMessages[HelpString]))
                 else:
                     await message.channel.send("Unknown command!")
 
@@ -322,7 +322,7 @@ class MyClient(discord.Client):
             # Send the message
             await message.channel.send(content="", embed=GetEmbed("", f"Global Rank: `#{str(player['rank'])}`\nCountry Rank (:flag_{player['country'].lower()}:{player['country']}): `#{str(player['countryRank'])}`\nPP: `{str(player['pp'])}pp`\nLeaderboards: [Global](https://scoresaber.com/global/{str(GetScoreBoardNum(player['rank']))}) | [Country](https://scoresaber.com/global/{str(GetScoreBoardNum(player['countryRank']))}&country={player['country'].lower()})").set_author(name=player['playerName'], url=f"https://scoresaber.com/u/{player['playerId']}", icon_url=player["avatar"]).set_footer(icon_url=ProfilePicture, text=f"ID: {player['playerId']}"))
             return
-        
+
         # Register command
         if message.content.lower().startswith("ss!register"):
             # If the stats are being updated
